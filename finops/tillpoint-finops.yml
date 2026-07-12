@@ -1,0 +1,82 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Tillpoint
+providerId: tillpoint
+created: '2026-07-11'
+modified: '2026-07-11'
+reconciled: false
+tags:
+- Point of Sale
+- POS
+- EPOS
+- Retail
+- Business Management
+- FinOps
+- Cost Management
+- FOCUS
+description: >-
+  FinOps view of Tillpoint spend. Tillpoint is a fixed, recurring SaaS
+  subscription rather than a usage-metered API - cost scales with the number of
+  registers/terminals and locations, not with API calls or data volume (there is
+  no public API to meter). The dominant cost driver is the per-register monthly
+  subscription, plus any Multi-store plan for additional locations and terminals.
+  All modules are bundled, so there are no per-module add-on charges to allocate.
+notes: >-
+  Because Tillpoint publishes no usage-based API pricing, this FinOps view treats
+  spend as a predictable recurring subscription. Per-unit rates vary by region
+  (GBP/USD) and billing term and are not reconciled here. Verify on tillpoint.com.
+sources:
+- https://www.tillpoint.com/
+- https://www.getapp.co.uk/software/112377/tillpoint
+- https://focus.finops.org/focus-specification/v1-3/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Tillpoint
+serviceCategory: Point of Sale and Business Management
+billingModel:
+  pricingCategory: Subscription
+  billingFrequency: Monthly
+  billingCurrency: USD
+  chargeCategories:
+  - Purchase
+  - Adjustment
+focusColumns:
+  ServiceName: Tillpoint EPOS
+  ServiceCategory: Point of Sale and Business Management
+  ProviderName: Tillpoint
+  PublisherName: Tillpoint
+  InvoiceIssuerName: Tillpoint
+  BillingCurrency: USD
+  ChargeCategory: Purchase
+  PricingCategory: Subscription
+meters:
+- name: register_subscription
+  description: Recurring per-register (per-terminal) monthly subscription fee.
+  unit: register-months
+  aggregation: sum
+  dimensions:
+  - account
+  - location
+- name: multi_store_subscription
+  description: Multi-store plan covering additional terminals and locations.
+  unit: subscription-months
+  aggregation: sum
+  dimensions:
+  - account
+principles:
+- name: Visibility
+  description: Track the number of active registers and locations - spend is a direct function of terminal and location count, not API usage.
+- name: Allocation
+  description: Map each register/location subscription to the store or cost center it serves.
+- name: Optimization
+  description: Right-size the number of active terminals and choose Single Store vs Multi-store plans; prefer annual billing where the discount applies; all modules are bundled so there is nothing to trim at the module level.
+- name: Accountability
+  description: Assign an owner per location; review active-register counts monthly against the subscription invoice.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

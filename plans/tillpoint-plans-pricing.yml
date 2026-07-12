@@ -1,0 +1,108 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Tillpoint
+providerId: tillpoint
+created: '2026-07-11'
+modified: '2026-07-11'
+reconciled: false
+tags:
+- Point of Sale
+- POS
+- EPOS
+- Retail
+- Business Management
+- Plans
+description: >-
+  Tillpoint is sold as a per-register (per-terminal) monthly subscription that
+  bundles all 25+ modules - Point of Sale, Inventory, Customers/CRM, Staff,
+  Accounting, Purchase Orders, and Reporting - with no per-module add-on fees.
+  Support, training, lifetime software updates, and access to future features
+  are included. A 14-day free trial is offered. Published entry pricing starts
+  around GBP 29 / USD 29 per register per month; a Multi-store plan (reported
+  around USD 79/month billed annually) adds two terminals across unlimited
+  locations with unlimited users. Exact current tiers and currency-specific
+  rates vary by region and billing term and are not reconciled here.
+notes: >-
+  Prices are gathered from Tillpoint marketing and third-party software
+  directories, not from a live checkout, and differ by region (GBP/USD) and by
+  monthly-vs-annual billing. Tillpoint does not charge separately for a
+  developer API - none is published. Verify current pricing on tillpoint.com.
+sources:
+- https://www.tillpoint.com/
+- https://www.getapp.co.uk/software/112377/tillpoint
+- https://www.capterra.co.uk/software/157398/tillpoint
+- https://reviews.financesonline.com/p/tillpoint/
+plans:
+- id: tillpoint-free-trial
+  name: Free Trial
+  type: trial
+  description: >-
+    14-day free trial with full access to the platform and all bundled modules,
+    including support and training. No public API access is provided.
+  entries:
+  - label: Trial Period
+    name: trial_period
+    type: flat
+    metric: days
+    limit: 14
+    timeFrame: day
+    geo: global
+    unit: 1
+    price: free for 14 days
+    userMultiplied: false
+  elements:
+  - name: All Modules Included
+  - name: Support and Training
+  - name: Single Register
+- id: tillpoint-single-store
+  name: Single Store (Per Register)
+  type: paid
+  description: >-
+    Per-register monthly subscription for a single location, bundling all 25+
+    modules with support, training, lifetime updates, and future features.
+    Entry pricing reported around GBP 29 / USD 29 per register per month.
+  entries:
+  - label: Per Register
+    name: single_store_register
+    type: recurring
+    metric: register
+    limit: 1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: from approx 29 per register per month (GBP/USD; varies by region and billing term)
+    userMultiplied: true
+  elements:
+  - name: Point of Sale Module
+  - name: Inventory Module
+  - name: Customers / CRM Module
+  - name: Accounting Module
+  - name: Reporting Module
+  - name: Support and Training
+- id: tillpoint-multi-store
+  name: Multi-store
+  type: paid
+  description: >-
+    Multi-location plan reported starting around USD 79/month billed annually,
+    including two terminals across unlimited locations and unlimited users, with
+    all modules bundled.
+  entries:
+  - label: Multi-store Subscription
+    name: multi_store
+    type: recurring
+    metric: subscription
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: from approx USD 79 per month billed annually (2 terminals, unlimited locations and users)
+    userMultiplied: false
+  elements:
+  - name: Two Terminals
+  - name: Unlimited Locations
+  - name: Unlimited Users
+  - name: All Modules Included
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

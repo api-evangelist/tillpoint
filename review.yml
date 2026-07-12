@@ -1,0 +1,83 @@
+aid: tillpoint
+name: Tillpoint
+review:
+  question: Does Tillpoint expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-11'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Tillpoint does not publish any documented
+    public API at all - REST or otherwise - so there is no server-push transport
+    (WebSocket or SSE) to model. Tillpoint is a modular EPOS and business
+    management application delivered through its own apps and a set of pre-built
+    third-party integrations (QuickBooks Online, Xero, WooCommerce, PayPal,
+    Worldpay, Mailchimp). Any realtime behavior is internal to the product or
+    carried by those external integrations, which have their own protocols and
+    are out of scope for a Tillpoint AsyncAPI document.
+findings:
+  summary: |
+    Tillpoint does not publish a documented public WebSocket API - and, as of
+    the review date, does not publish a documented public developer API of any
+    kind. There is no developer portal (no developer.tillpoint.com), no API
+    reference, no OpenAPI, and no published authentication or webhook
+    documentation. Third-party software directories reflect this: GetApp lists
+    the API capability with zero mentions, and SaaSworthy and SoftwareWorld
+    explicitly state Tillpoint does not provide an API. Connectivity to other
+    systems is instead delivered through named pre-built integrations. No
+    WebSocket (ws:// or wss://) endpoint is documented anywhere.
+  accessModel: |
+    Tillpoint is app-only / integration-gated for programmatic access. It is a
+    cloud-based EPOS and business management platform bundling 25+ modules
+    (Point of Sale, Inventory, Customers/CRM, Staff, Accounting, Purchase
+    Orders, Reporting) under one subscription. Businesses interact through the
+    Tillpoint apps; systems interoperate through Tillpoint's pre-built
+    integrations rather than an open, self-serve API. Any developer or
+    partner-level programmatic access would require contacting Tillpoint
+    directly.
+  transports:
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented. No public API surface of any kind is published.
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API reference or OpenAPI is published by Tillpoint as of the review date.
+    - protocol: Integration
+      scheme: https
+      documented: true
+      note: Connectivity is via named pre-built integrations - QuickBooks Online, Xero, WooCommerce, PayPal, Worldpay, Mailchimp - not an open Tillpoint API.
+  endpointsConfirmedRest: []
+  endpointsModeled:
+    - Point of Sale (sales, discounts, payments, refunds, till reconciliation) - capability area, not a documented endpoint set
+    - Inventory (products, variants, pricing, stock levels, transfers) - capability area, not a documented endpoint set
+    - Customers/CRM (customer records, purchase history, loyalty) - capability area, not a documented endpoint set
+    - Accounting (double-entry accounting, sync to QuickBooks/Xero) - capability area, not a documented endpoint set
+sources:
+  - url: https://www.tillpoint.com/
+    type: Website
+    note: Product site describes modules (POS, Inventory, CRM, Accounting) but documents no developer API, webhooks, or endpoints.
+  - url: https://www.tillpoint.com/pos-system-integration/
+    type: Documentation
+    note: Discusses POS integration best practices generally; no Tillpoint API reference or endpoints.
+  - url: https://www.getapp.com/retail-consumer-services-software/a/tillpoint/
+    type: Directory
+    note: API capability shown with zero mentions; lists 7 pre-built integrations (Worldpay, QuickBooks Online, WooCommerce, PayPal, Xero, Mailchimp).
+  - url: https://www.saasworthy.com/product/tillpoint
+    type: Directory
+    note: States Tillpoint does not provide an API.
+  - url: https://mailchimp.com/integrations/tillpoint/
+    type: Integration
+    note: Pre-built CRM-to-Mailchimp sync; a productized integration, not an open API.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket (or any public API) surface exists to model. Tillpoint is a
+    modular EPOS/business-management application whose programmatic access is
+    gated behind pre-built integrations and direct contact. The apis.yml
+    catalogues four logical capability areas (Point of Sale, Inventory,
+    Customers, Accounting) marked endpointsModeled with no fabricated endpoints,
+    so apis.io users searching "point of sale" find an honest, well-tagged
+    Tillpoint entry.
