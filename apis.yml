@@ -2,114 +2,47 @@ aid: tillpoint
 url: https://raw.githubusercontent.com/api-evangelist/tillpoint/refs/heads/main/apis.yml
 name: Tillpoint
 kind: company
-description: Tillpoint is a modular, cloud-based EPOS (electronic point of sale)
-  and business management platform for retail, hospitality, and services. A single
-  subscription bundles 25+ modules - Point of Sale, Inventory, Customers/CRM, Staff,
-  Accounting, Purchase Orders, Reporting, and more - across one terminal or thousands
-  of locations. As of this review Tillpoint does not publish a documented public or
-  partner developer API - there is no developer portal, no API reference, and no
-  OpenAPI. Connectivity is delivered through pre-built integrations (QuickBooks
-  Online, Xero, WooCommerce, PayPal, Worldpay, Mailchimp). The API surfaces catalogued
-  here (Point of Sale, Inventory, Customers, Accounting) are logical capability areas
-  of the platform and are honestly marked as endpointsModeled - no endpoints are
-  fabricated. Direct/programmatic access requires contacting Tillpoint.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+description: Tillpoint is a modular, cloud-based EPOS (electronic point of sale) and business management platform for retail, hospitality, and services. A single subscription bundles 25+ modules - Point of Sale, Inventory, Customers/CRM, Staff, Accounting, Purchase Orders, Reporting, and more - across one terminal or thousands of locations. As of this review Tillpoint does not publish a documented public or partner developer API - there is no developer portal, no API reference, and no OpenAPI. Connectivity is delivered through pre-built integrations (QuickBooks Online, Xero, WooCommerce, PayPal, Worldpay, Mailchimp). The API surfaces catalogued here (Point of Sale, Inventory, Customers, Accounting) are logical capability areas of the platform and are honestly marked as endpointsModeled - no endpoints are fabricated. Direct/programmatic access requires contacting Tillpoint.
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: true
+  try_now: false
+  public: false
+  label: Freemium (free trial)
+  confidence: medium
+  source:
+    - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tillpoint.png
 tags:
-- Point of Sale
-- POS
-- EPOS
-- Retail
-- Business Management
-- Inventory
-- Hospitality
-- CRM
-- Accounting
-created: '2026-07-11'
-modified: '2026-07-11'
-specificationVersion: '0.19'
-apis:
-- aid: tillpoint:tillpoint-point-of-sale-api
-  name: Tillpoint Point of Sale API
-  tags:
   - Point of Sale
   - POS
-  - Sales
+  - EPOS
   - Retail
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://www.tillpoint.com/
-  endpointsModeled: true
-  properties:
-  - url: https://www.tillpoint.com/
-    type: Documentation
-  - url: https://www.tillpoint.com/pos-system-integration/
-    type: Documentation
-  description: Logical Point of Sale capability of the Tillpoint platform - ringing up
-    sales, applying discounts, splitting payments, issuing receipts and refunds, and
-    reconciling tills. Endpoints are modeled, not documented - Tillpoint exposes this
-    through its apps, not a published public API. No endpoints are fabricated here.
-- aid: tillpoint:tillpoint-inventory-api
-  name: Tillpoint Inventory API
-  tags:
-  - Inventory
-  - Products
-  - Stock
-  - Retail
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://www.tillpoint.com/
-  endpointsModeled: true
-  properties:
-  - url: https://www.tillpoint.com/
-    type: Documentation
-  description: Logical Inventory and Products capability - product catalog, variants,
-    pricing, real-time stock levels, low-stock alerts, and multi-location transfers.
-    Modeled as a capability area only - Tillpoint does not publish an inventory API
-    reference. No endpoints are fabricated here.
-- aid: tillpoint:tillpoint-customers-api
-  name: Tillpoint Customers (CRM) API
-  tags:
-  - Customers
-  - CRM
-  - Loyalty
-  - Retail
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://www.tillpoint.com/
-  endpointsModeled: true
-  properties:
-  - url: https://www.tillpoint.com/
-    type: Documentation
-  - url: https://mailchimp.com/integrations/tillpoint/
-    type: Documentation
-  description: Logical Customers/CRM capability - customer records, purchase history,
-    loyalty programs, and marketing sync. Tillpoint's CRM module pushes customers to
-    Mailchimp via a pre-built integration rather than a public API. Endpoints are
-    modeled only - none are fabricated.
-- aid: tillpoint:tillpoint-accounting-api
-  name: Tillpoint Accounting API
-  tags:
-  - Accounting
-  - Finance
   - Business Management
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://www.tillpoint.com/
-  endpointsModeled: true
-  properties:
-  - url: https://www.tillpoint.com/
-    type: Documentation
-  description: Logical Accounting capability - built-in double-entry accounting plus
-    sync to QuickBooks Online and Xero through pre-built integrations. Modeled as a
-    capability area - no public accounting API is documented and no endpoints are
-    fabricated here.
+  - Inventory
+  - Hospitality
+  - CRM
+  - Accounting
+created: '2026-07-11'
+modified: '2026-07-25'
+specificationVersion: '0.19'
+apis: []
 common:
-- type: LinkedIn
-  url: https://www.linkedin.com/company/tillpoint
-- type: Website
-  url: https://www.tillpoint.com
-- type: Documentation
-  url: https://www.tillpoint.com/pos-system-integration/
-- type: Plans
-  url: plans/tillpoint-plans-pricing.yml
-- type: FinOps
-  url: finops/tillpoint-finops.yml
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/tillpoint
+  - type: Website
+    url: https://www.tillpoint.com
+  - type: Documentation
+    url: https://www.tillpoint.com/pos-system-integration/
+  - type: Plans
+    url: plans/tillpoint-plans-pricing.yml
+  - type: FinOps
+    url: finops/tillpoint-finops.yml
+  - type: ProductPage
+    url: https://www.tillpoint.com/
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com

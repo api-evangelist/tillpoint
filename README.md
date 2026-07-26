@@ -44,11 +44,6 @@ The four API entries below are **logical capability areas** of the platform, cat
 
 ## APIs (Modeled Capability Areas)
 
-### Tillpoint Point of Sale API
-
-Logical Point of Sale capability - ringing up sales, applying discounts, splitting payments, issuing receipts and refunds, and reconciling tills. Endpoints modeled, not documented.
-
-- **Human URL:** [https://www.tillpoint.com/](https://www.tillpoint.com/)
 
 #### Tags
 
@@ -57,11 +52,6 @@ Logical Point of Sale capability - ringing up sales, applying discounts, splitti
 - Sales
 - Retail
 
-### Tillpoint Inventory API
-
-Logical Inventory and Products capability - product catalog, variants, pricing, real-time stock levels, low-stock alerts, and multi-location transfers. Endpoints modeled, not documented.
-
-- **Human URL:** [https://www.tillpoint.com/](https://www.tillpoint.com/)
 
 #### Tags
 
@@ -70,11 +60,6 @@ Logical Inventory and Products capability - product catalog, variants, pricing, 
 - Stock
 - Retail
 
-### Tillpoint Customers (CRM) API
-
-Logical Customers/CRM capability - customer records, purchase history, loyalty programs, and marketing sync (pushed to Mailchimp via a pre-built integration). Endpoints modeled, not documented.
-
-- **Human URL:** [https://www.tillpoint.com/](https://www.tillpoint.com/)
 
 #### Tags
 
@@ -83,11 +68,6 @@ Logical Customers/CRM capability - customer records, purchase history, loyalty p
 - Loyalty
 - Retail
 
-### Tillpoint Accounting API
-
-Logical Accounting capability - built-in double-entry accounting plus sync to QuickBooks Online and Xero through pre-built integrations. Endpoints modeled, not documented.
-
-- **Human URL:** [https://www.tillpoint.com/](https://www.tillpoint.com/)
 
 #### Tags
 
