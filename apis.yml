@@ -17,6 +17,15 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tillpoint.png
 tags:
+  - Point-of-Sale
+  - EPOS
+  - Retail
+  - Business Management
+  - Inventory
+  - Hospitality
+  - CRM
+  - Accounting
+tags_raw:
   - Point of Sale
   - POS
   - EPOS
