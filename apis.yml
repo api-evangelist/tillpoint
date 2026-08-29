@@ -3,6 +3,17 @@ url: https://raw.githubusercontent.com/api-evangelist/tillpoint/refs/heads/main/
 name: Tillpoint
 kind: company
 description: Tillpoint is a modular, cloud-based EPOS (electronic point of sale) and business management platform for retail, hospitality, and services. A single subscription bundles 25+ modules - Point of Sale, Inventory, Customers/CRM, Staff, Accounting, Purchase Orders, Reporting, and more - across one terminal or thousands of locations. As of this review Tillpoint does not publish a documented public or partner developer API - there is no developer portal, no API reference, and no OpenAPI. Connectivity is delivered through pre-built integrations (QuickBooks Online, Xero, WooCommerce, PayPal, Worldpay, Mailchimp). The API surfaces catalogued here (Point of Sale, Inventory, Customers, Accounting) are logical capability areas of the platform and are honestly marked as endpointsModeled - no endpoints are fabricated. Direct/programmatic access requires contacting Tillpoint.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
