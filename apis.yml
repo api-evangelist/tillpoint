@@ -29,7 +29,6 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tillpoint.png
 tags:
   - Point-of-Sale
-  - POS
   - EPOS
   - Retail
   - Business Management
