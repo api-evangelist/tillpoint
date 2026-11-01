@@ -1,4 +1,4 @@
-# Tillpoint (tillpoint)
+# Tillpoint
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,94 +64,86 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Tillpoint is a modular, cloud-based EPOS (electronic point of sale) and business management platform for retail, hospitality, and services. A single subscription bundles 25+ modules - Point of Sale, Inventory, Customers/CRM, Staff, Accounting, Purchase Orders, and Reporting - and runs on anything from one register to thousands of locations.
+Tillpoint is a modular, cloud-based EPOS (electronic point of sale) and business management platform for retail, hospitality, and services. A single subscription bundles 25+ modules - Point of Sale, Inventory, Customers/CRM, Staff, Accounting, Purchase Orders, Reporting, and more - across one terminal or thousands of locations. As of this review Tillpoint does not publish a documented public or partner developer API - there is no developer portal, no API reference, and no OpenAPI. Connectivity is delivered through pre-built integrations (QuickBooks Online, Xero, WooCommerce, PayPal, Worldpay, Mailchimp). The API surfaces catalogued here (Point of Sale, Inventory, Customers, Accounting) are logical capability areas of the platform and are honestly marked as endpointsModeled - no endpoints are fabricated. Direct/programmatic access requires contacting Tillpoint.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/tillpoint/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/tillpoint/refs/heads/main/apis.yml)
+**Areas:** Point-of-Sale · EPOS · Retail · Business Management · Inventory · Hospitality · CRM · Accounting
 
-## Access Model (Important)
+## Tillpoint on APIs.io
 
-As of this review (2026-07-11), **Tillpoint does not publish a documented public or partner developer API.** There is:
+Everything profiled for Tillpoint is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/tillpoint/](https://apis.io/providers/tillpoint/)** — or go straight to one of the APIs or properties below.
 
-- No developer portal (no `developer.tillpoint.com`)
-- No public API reference or OpenAPI
-- No documented authentication, webhooks, or WebSocket endpoints
+### Published properties
 
-Third-party software directories confirm this: GetApp lists the API capability with zero mentions, and SaaSworthy and SoftwareWorld state Tillpoint does not provide an API. Programmatic connectivity is delivered through **pre-built integrations** rather than an open API:
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- QuickBooks Online (accounting)
-- Xero (accounting)
-- WooCommerce (e-commerce)
-- PayPal (payments)
-- Worldpay (payments)
-- Mailchimp (CRM / marketing sync)
+#### Plans and pricing (1)
 
-Developer or partner-level programmatic access would require contacting Tillpoint directly.
+Published plans, tiers and prices.
 
-The four API entries below are **logical capability areas** of the platform, catalogued so this provider surfaces for point-of-sale discovery. They are marked `endpointsModeled: true` and **no endpoints are fabricated**.
+- [Tillpoint Plans Pricing](https://apis.io/plans/tillpoint/tillpoint-plans-pricing/)
 
-## Tags
+#### FinOps (1)
 
-- Point of Sale
-- POS
-- EPOS
-- Retail
-- Business Management
-- Inventory
-- Hospitality
-- CRM
-- Accounting
+What the API costs to run, by operation.
 
-## Timestamps
+- [Tillpoint Finops](https://apis.io/finops/tillpoint/tillpoint-finops/)
 
-- **Created:** 2026-07-11
-- **Modified:** 2026-07-11
+## Where to find this API
 
-## APIs (Modeled Capability Areas)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-
-#### Tags
-
-- Point of Sale
-- POS
-- Sales
-- Retail
-
-
-#### Tags
-
-- Inventory
-- Products
-- Stock
-- Retail
-
-
-#### Tags
-
-- Customers
-- CRM
-- Loyalty
-- Retail
-
-
-#### Tags
-
-- Accounting
-- Finance
-- Business Management
-
-## Pricing
-
-Tillpoint is a per-register monthly subscription bundling all 25+ modules, with a 14-day free trial. Entry pricing starts around GBP/USD 29 per register per month; a Multi-store plan (reported around USD 79/month billed annually) adds two terminals across unlimited locations and unlimited users. See [plans/tillpoint-plans-pricing.yml](plans/tillpoint-plans-pricing.yml).
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/tillpoint)
 - [Website](https://www.tillpoint.com)
 - [Documentation](https://www.tillpoint.com/pos-system-integration/)
-- [Plans](plans/tillpoint-plans-pricing.yml)
-- [Fin Ops](finops/tillpoint-finops.yml)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 6.0** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 7.9 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 0.0** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/tillpoint/](https://apis.io/providers/tillpoint/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Tillpoint: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/tillpoint/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
